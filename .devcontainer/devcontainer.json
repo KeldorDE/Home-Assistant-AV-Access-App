@@ -1,5 +1,5 @@
 {
-  "name": "Example devcontainer for apps repositories",
+  "name": "AV Access App",
   "image": "ghcr.io/home-assistant/devcontainer:6-apps",
   "overrideCommand": false,
   "remoteUser": "vscode",

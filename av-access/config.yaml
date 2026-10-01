@@ -1,5 +1,5 @@
 name: "AV Access"
-version: "0.1.0"
+version: "0.2.0"
 slug: "av_access"
 description: "Install and update the AV Access integration for Home Assistant."
 url: "https://github.com/KeldorDE/Home-Assistant-AV-Access-App"
@@ -7,7 +7,11 @@ arch:
   - amd64
   - aarch64
 
-startup: once
+startup: application
+init: false
+
+hassio_api: true
+hassio_role: homeassistant
 
 map:
   - type: homeassistant_config
