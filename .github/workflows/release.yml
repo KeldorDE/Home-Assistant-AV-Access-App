@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+      - "[0-9]+.[0-9]+.[0-9]+-*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout App repository
+        uses: actions/checkout@v7
+
+      - name: Checkout AV Access integration
+        uses: actions/checkout@v7
+        with:
+          repository: KeldorDE/Home-Assistant-AV-Access
+          ref: v1.0.2
+          path: integration-source
+
+
